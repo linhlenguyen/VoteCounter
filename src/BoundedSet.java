@@ -2,6 +2,13 @@ import java.util.*;
 import java.io.*;
 
 public class BoundedSet<T> {
+  /*
+  A bounded set with limited size that behaves similar to a queue
+  Adding to a full set will remove the oldest item in the set and replace it with new item
+  It uses a list and a simple head pointer to add/replace element
+  This allow us to maintain a list of user to votes which only take into account n most recent votes
+  */
+
   private List<T> dataStorage;
   private int size;
   private int head;
